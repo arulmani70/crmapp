@@ -7,7 +7,7 @@ import 'package:crmapp/src/customer/view/mobile/widgets/customer_card.dart';
 import 'package:crmapp/src/customer/view/mobile/widgets/empty_screens.dart';
 import 'package:crmapp/src/customer/view/mobile/widgets/status_widget.dart';
 
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:crmapp/src/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,16 +41,13 @@ class _CustomerScreenTabletState extends State<CustomerScreenTablet> {
     }
 
     if (_searchQuery.isNotEmpty) {
-      filtered =
-          filtered.where((customer) {
-            return customer.name.toLowerCase().contains(
-                  _searchQuery.toLowerCase(),
-                ) ||
-                customer.email.toLowerCase().contains(
-                  _searchQuery.toLowerCase(),
-                ) ||
-                customer.phone.contains(_searchQuery);
-          }).toList();
+      filtered = filtered.where((customer) {
+        return customer.name.toLowerCase().contains(
+              _searchQuery.toLowerCase(),
+            ) ||
+            customer.email.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+            customer.phone.contains(_searchQuery);
+      }).toList();
     }
 
     return filtered;
@@ -225,21 +222,20 @@ class _CustomerScreenTabletState extends State<CustomerScreenTablet> {
                             Icons.search,
                             color: Colors.grey[500],
                           ),
-                          suffixIcon:
-                              _searchQuery.isNotEmpty
-                                  ? IconButton(
-                                    icon: Icon(
-                                      Icons.clear,
-                                      color: Colors.grey[500],
-                                    ),
-                                    onPressed: () {
-                                      _searchController.clear();
-                                      setState(() {
-                                        _searchQuery = '';
-                                      });
-                                    },
-                                  )
-                                  : null,
+                          suffixIcon: _searchQuery.isNotEmpty
+                              ? IconButton(
+                                  icon: Icon(
+                                    Icons.clear,
+                                    color: Colors.grey[500],
+                                  ),
+                                  onPressed: () {
+                                    _searchController.clear();
+                                    setState(() {
+                                      _searchQuery = '';
+                                    });
+                                  },
+                                )
+                              : null,
                           border: InputBorder.none,
                           contentPadding: const EdgeInsets.symmetric(
                             horizontal: 16,
@@ -376,20 +372,19 @@ class _CustomerScreenTabletState extends State<CustomerScreenTablet> {
               const SizedBox(height: 8),
 
               Expanded(
-                child:
-                    filteredCustomers.isEmpty
-                        ? EmptyScreens().buildEmptyState(_searchQuery)
-                        : ListView.builder(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          itemCount: filteredCustomers.length,
-                          itemBuilder: (context, index) {
-                            final customer = filteredCustomers[index];
-                            return CustomerCard().buildCustomerCard(
-                              customer,
-                              context,
-                            );
-                          },
-                        ),
+                child: filteredCustomers.isEmpty
+                    ? EmptyScreens().buildEmptyState(_searchQuery)
+                    : ListView.builder(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        itemCount: filteredCustomers.length,
+                        itemBuilder: (context, index) {
+                          final customer = filteredCustomers[index];
+                          return CustomerCard().buildCustomerCard(
+                            customer,
+                            context,
+                          );
+                        },
+                      ),
               ),
             ],
           );
@@ -439,10 +434,9 @@ class _CustomerScreenTabletState extends State<CustomerScreenTablet> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
-                color:
-                    isSelected
-                        ? Colors.white.withOpacity(0.2)
-                        : color.withOpacity(0.1),
+                color: isSelected
+                    ? Colors.white.withOpacity(0.2)
+                    : color.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(

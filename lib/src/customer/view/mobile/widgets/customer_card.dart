@@ -2,7 +2,7 @@ import 'package:crmapp/src/customer/bloc/customer_bloc.dart';
 import 'package:crmapp/src/customer/view/mobile/dialogs/delete_customer_dialog.dart';
 import 'package:crmapp/src/customer/view/mobile/dialogs/update_customer_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:crmapp/src/models/customer_model.dart';
+import 'package:crmapp/src/common/models/customer_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

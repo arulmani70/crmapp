@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:crmapp/src/customer/bloc/customer_bloc.dart';
 
 class UpdateCustomerDialog {

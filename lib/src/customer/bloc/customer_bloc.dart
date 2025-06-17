@@ -1,7 +1,7 @@
 import 'package:crmapp/src/customer/repo/customer_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:crmapp/src/models/customer_model.dart';
+import 'package:crmapp/src/common/models/customer_model.dart';
 import 'package:logger/logger.dart';
 
 part 'customer_event.dart';

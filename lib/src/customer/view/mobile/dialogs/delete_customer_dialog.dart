@@ -1,5 +1,5 @@
 import 'package:crmapp/src/customer/bloc/customer_bloc.dart';
-import 'package:crmapp/src/models/customer_model.dart';
+import 'package:crmapp/src/common/models/customer_model.dart';
 import 'package:flutter/material.dart';
 
 class DeleteCustomerDialog {

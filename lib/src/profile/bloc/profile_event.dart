@@ -1,4 +1,4 @@
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class ProfileEvent extends Equatable {

@@ -1,6 +1,6 @@
 import 'package:crmapp/src/common/common.dart';
 import 'package:crmapp/src/common/constants/constansts.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
@@ -9,13 +9,12 @@ class CustomerRepository {
   final PreferencesRepository prefRepo;
   final Dio _dio = Dio();
   final log = Logger();
-  final String baseUrl =
-      Constants.api.API_BASE_URL.endsWith('/')
-          ? Constants.api.API_BASE_URL.substring(
-            0,
-            Constants.api.API_BASE_URL.length - 1,
-          )
-          : Constants.api.API_BASE_URL;
+  final String baseUrl = Constants.api.API_BASE_URL.endsWith('/')
+      ? Constants.api.API_BASE_URL.substring(
+          0,
+          Constants.api.API_BASE_URL.length - 1,
+        )
+      : Constants.api.API_BASE_URL;
 
   CustomerRepository({required this.apiRepo, required this.prefRepo});
 
@@ -25,8 +24,9 @@ class CustomerRepository {
 
       if (response.statusCode == 200) {
         List<dynamic> data = response.data;
-        List<CustomerModel> customers =
-            data.map((json) => CustomerModel.fromJson(json)).toList();
+        List<CustomerModel> customers = data
+            .map((json) => CustomerModel.fromJson(json))
+            .toList();
 
         return customers;
       } else {

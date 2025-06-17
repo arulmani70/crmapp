@@ -18,7 +18,7 @@ import 'package:crmapp/src/app/route_names.dart';
 import 'package:logger/logger.dart';
 import 'package:crmapp/src/common/widgets/splashscreen.dart';
 
-import '../models/models.dart';
+import '../common/models/models.dart';
 
 class Routes {
   final log = Logger();

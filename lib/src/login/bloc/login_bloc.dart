@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:logger/logger.dart';
 
 import 'package:crmapp/src/login/repo/login_repository.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 
 part 'login_state.dart';
 part 'login_event.dart';

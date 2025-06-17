@@ -3,7 +3,7 @@ import 'package:crmapp/src/chat/view/desktop/chat_page_desktop.dart';
 import 'package:crmapp/src/chat/view/mobile/chat_page_mobile.dart';
 import 'package:crmapp/src/chat/view/tablet/chat_page_tablet.dart';
 import 'package:crmapp/src/common/services/websocket_service.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -36,11 +36,10 @@ class ChatPage extends StatelessWidget {
         final webSocketService = WebSocketService();
 
         return BlocProvider(
-          create:
-              (_) => ChatMessageBloc(
-                webSocketService: webSocketService,
-                loggedInUserId: userId,
-              )..add(InitializeChat(customer: customer)),
+          create: (_) => ChatMessageBloc(
+            webSocketService: webSocketService,
+            loggedInUserId: userId,
+          )..add(InitializeChat(customer: customer)),
           child: Builder(
             builder: (context) {
               return ResponsiveValue<Widget>(

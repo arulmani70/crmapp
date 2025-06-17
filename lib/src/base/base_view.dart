@@ -7,7 +7,7 @@ import 'package:crmapp/src/base/bloc/base_bloc.dart';
 import 'package:crmapp/src/app/route_names.dart';
 import 'package:crmapp/src/base/repository/base_repository.dart';
 import 'package:crmapp/src/common/common.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
 

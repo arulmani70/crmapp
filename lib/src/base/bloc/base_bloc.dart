@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:crmapp/src/base/repository/base_repository.dart';
 import 'package:equatable/equatable.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:crmapp/src/common/constants/constansts.dart';
 import 'package:logger/logger.dart';
 

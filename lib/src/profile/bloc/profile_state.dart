@@ -1,4 +1,4 @@
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:equatable/equatable.dart';
 
 enum ProfileStatus { initial, loading, loaded, success, error, loggedout }

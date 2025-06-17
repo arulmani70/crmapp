@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:crmapp/src/loigin_firebase/repo/login_firebase_repository.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:logger/logger.dart';
 part 'login_firebase_event.dart';
 part 'login_firebase_state.dart';

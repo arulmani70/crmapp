@@ -3,8 +3,8 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:crmapp/src/common/services/websocket_service.dart';
-import 'package:crmapp/src/models/customer_model.dart';
-import 'package:crmapp/src/models/chat_message.dart';
+import 'package:crmapp/src/common/models/customer_model.dart';
+import 'package:crmapp/src/common/models/chat_message.dart';
 import 'package:equatable/equatable.dart';
 import 'package:logger/logger.dart';
 

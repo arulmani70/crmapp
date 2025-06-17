@@ -1,5 +1,5 @@
 import 'package:crmapp/src/chat/bloc/chat_bloc.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -208,10 +208,9 @@ class _ChatPageMobileState extends State<ChatPageMobile> {
                     return Container(
                       margin: const EdgeInsets.only(bottom: 16),
                       child: Row(
-                        mainAxisAlignment:
-                            msg.isUser
-                                ? MainAxisAlignment.end
-                                : MainAxisAlignment.start,
+                        mainAxisAlignment: msg.isUser
+                            ? MainAxisAlignment.end
+                            : MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           if (!msg.isUser)
@@ -227,10 +226,9 @@ class _ChatPageMobileState extends State<ChatPageMobile> {
                           if (!msg.isUser) const SizedBox(width: 12),
                           Flexible(
                             child: Column(
-                              crossAxisAlignment:
-                                  msg.isUser
-                                      ? CrossAxisAlignment.end
-                                      : CrossAxisAlignment.start,
+                              crossAxisAlignment: msg.isUser
+                                  ? CrossAxisAlignment.end
+                                  : CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   padding: const EdgeInsets.symmetric(
@@ -238,22 +236,18 @@ class _ChatPageMobileState extends State<ChatPageMobile> {
                                     vertical: 16,
                                   ),
                                   decoration: BoxDecoration(
-                                    color:
-                                        msg.isUser
-                                            ? const Color(0xFF6366F1)
-                                            : Colors.white,
-                                    borderRadius: BorderRadius.circular(
-                                      20,
-                                    ).copyWith(
-                                      bottomLeft:
-                                          msg.isUser
+                                    color: msg.isUser
+                                        ? const Color(0xFF6366F1)
+                                        : Colors.white,
+                                    borderRadius: BorderRadius.circular(20)
+                                        .copyWith(
+                                          bottomLeft: msg.isUser
                                               ? const Radius.circular(20)
                                               : const Radius.circular(4),
-                                      bottomRight:
-                                          msg.isUser
+                                          bottomRight: msg.isUser
                                               ? const Radius.circular(4)
                                               : const Radius.circular(20),
-                                    ),
+                                        ),
                                     boxShadow: [
                                       BoxShadow(
                                         color: Colors.black.withOpacity(0.05),
@@ -265,10 +259,9 @@ class _ChatPageMobileState extends State<ChatPageMobile> {
                                   child: Text(
                                     msg.text,
                                     style: TextStyle(
-                                      color:
-                                          msg.isUser
-                                              ? Colors.white
-                                              : const Color(0xFF1E293B),
+                                      color: msg.isUser
+                                          ? Colors.white
+                                          : const Color(0xFF1E293B),
                                       fontSize: 16,
                                       height: 1.5,
                                     ),

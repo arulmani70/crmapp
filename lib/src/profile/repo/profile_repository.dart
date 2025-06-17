@@ -1,5 +1,5 @@
 import 'package:crmapp/src/common/common.dart';
-import 'package:crmapp/src/models/models.dart';
+import 'package:crmapp/src/common/models/models.dart';
 import 'package:crmapp/src/common/constants/constansts.dart';
 
 import 'package:logger/logger.dart';
